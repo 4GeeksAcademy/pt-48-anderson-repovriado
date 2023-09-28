@@ -78,3 +78,44 @@ En el mundo de la programación, los lenguajes de programación se dividen en do
 La elección entre un lenguaje de programación compilado y uno interpretado depende de diversos factores, como el rendimiento requerido, la portabilidad, la facilidad de desarrollo y las necesidades específicas del proyecto. Algunos lenguajes, como C y C++, pueden utilizarse de manera híbrida, permitiendo tanto la compilación como la interpretación.
 
 En última instancia, cada enfoque tiene sus ventajas y desventajas, y la elección del lenguaje dependerá del contexto y los objetivos del proyecto de programación.
+# Diferencias entre `var` y `let` en JavaScript
+
+En JavaScript, `var` y `let` son palabras clave utilizadas para declarar variables. Aunque ambos tienen un propósito similar, existen diferencias significativas en su comportamiento y alcance. A continuación, se presentan las principales diferencias entre `var` y `let`:
+
+## `var`
+
+- **Alcance de función:** Las variables declaradas con `var` tienen un alcance de función o alcance global, dependiendo de si se declaran dentro o fuera de una función, respectivamente.
+
+- **Izado (hoisting):** Las variables `var` son izadas (hoisted) al principio de su ámbito. Esto significa que se mueven al comienzo de la función o el ámbito global durante la fase de compilación, lo que puede llevar a comportamientos inesperados.
+
+- **Re-declaración permitida:** Es posible re-declarar una variable `var` dentro del mismo ámbito sin generar errores.
+
+- **No se limita al bloque:** `var` no tiene alcance de bloque, lo que significa que una variable `var` declarada dentro de un bloque estará disponible en todo el ámbito de la función o el ámbito global.
+
+## `let`
+
+- **Alcance de bloque:** Las variables declaradas con `let` tienen un alcance de bloque. Esto significa que están disponibles solo dentro del bloque en el que se declaran.
+
+- **Izado (hoisting):** A diferencia de `var`, las variables `let` no son izadas al principio de su ámbito. Si intentas acceder a una variable `let` antes de su declaración, obtendrás un error de referencia indefinida.
+
+- **Re-declaración prohibida:** No puedes re-declarar una variable `let` en el mismo ámbito. Intentarlo generará un error.
+
+- **Limitado al bloque:** `let` tiene un alcance limitado al bloque, lo que significa que una variable `let` declarada dentro de un bloque solo estará disponible en ese bloque y en sus sub-bloques.
+
+## Ejemplo
+
+```javascript
+function example() {
+  if (true) {
+    var varVariable = "Variable var";
+    let letVariable = "Variable let";
+  }
+
+  console.log(varVariable); // Funciona, varVariable tiene alcance de función.
+  console.log(letVariable); // Genera un error, letVariable no está definida aquí.
+}
+```
+# Conclusión
+
+En JavaScript, `let` es generalmente preferible a `var` debido a su alcance de bloque más estricto y su comportamiento más predecible. El uso de `let` ayuda a evitar errores sutiles y a escribir un código más claro y mantenible. Sin embargo, en código heredado o en ciertas situaciones, `var` aún puede ser utilizado. La elección entre `var` y `let` dependerá de las necesidades específicas del proyecto y de mantener las mejores prácticas de codificación.
+
