@@ -4,7 +4,8 @@ Este README proporciona una explicación detallada de un diagrama de flujo que r
 
 ## Diagrama de Flujo
 
-![Diagrama de Flujo de Retroalimentación](URL_DE_LA_IMAGEN)
+Diagrama de Flujo de Retroalimentación
+<img width="1005" alt="diagrama" src="https://github.com/4GeeksAcademy/pt-48-anderson-repovriado/assets/141663667/fe8c111b-0932-49b4-a031-cb967ae33bea">
 
 ## Explicación del Diagrama de Flujo
 
